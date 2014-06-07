@@ -1,0 +1,31 @@
+{
+  "name": "flower-power",
+  "version": "1.0.0",
+  "description": "Flower Power: Deconstruction of a design component",
+  "main": "index.js",
+  "dependencies": {
+    "kss": "^0.3.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "John Albin Wilkins",
+  "license": "© 2014 John Albin Wilkins. All rights reserved.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:JohnAlbin/flower-power"
+  },
+  "keywords": [
+    "design",
+    "components",
+    "smacss",
+    "bem",
+    "css",
+    "kss"
+  ],
+  "bugs": {
+    "url": "https://github.com/JohnAlbin/flower-power/issues"
+  },
+  "homepage": "https://github.com/JohnAlbin/flower-power"
+}
