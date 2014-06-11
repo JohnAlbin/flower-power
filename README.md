@@ -14,7 +14,7 @@ The rendered version of this project is available at http://johnalbin.github.io/
 The build scripts require `node-kss` to be installed in this directory. [node-kss](https://github.com/hughsk/kss-node) is a Node.js port of KSS. To install node-kss:
 
 1. Install Node.js on your local system. With Homebrew on Mac OS X, you can install it with `brew install node`.
-2. Use Node.js' package manager, npm, to install the node-kss and its dependencies.
+2. Use Node.js' package manager, npm, to install the node-kss and its dependencies based on the versions specified in `package.json`.
    * From the root of this project, run: `npm up`
 
 ## Building the style guide
