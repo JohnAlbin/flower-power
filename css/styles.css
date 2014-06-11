@@ -1,0 +1,86 @@
+.flower, .flower__petals, .flower__face, .flower__stem::before, .flower__leaves, .flower__bed, .flower__bed::before, .flower__bed::after, .flower:hover::before, .flower:focus::before, .flower.is-pollinating::before {
+  position: absolute;
+  width: 588px;
+  height: 561px;
+  background-repeat: no-repeat;
+  content: '';
+}
+
+.flower {
+  position: relative;
+}
+.flower__petals {
+  background-image: url('../images/flower__petals.png?1402479382');
+  background-position: 201px top;
+}
+.flower--tulip .flower__petals {
+  background-image: url('../images/flower--tulip__petals.png?1402479382');
+  background-position: 273px 53px;
+}
+.flower__face {
+  background-image: url('../images/flower__face.png?1402479382');
+  background-position: 282px 80px;
+}
+.flower--tulip .flower__face {
+  background-image: none;
+}
+.flower__stem::before {
+  background-image: url('../images/flower__stem.png?1402479382');
+  background-position: 231px 167px;
+  z-index: -4;
+}
+.flower__leaves {
+  background-image: url('../images/flower__leaves.png?1402479382');
+  background-position: 169px 258px;
+  z-index: -5;
+}
+.flower__bed {
+  position: relative;
+}
+.flower__bed .flower {
+  position: absolute;
+}
+.flower__bed::before {
+  bottom: 58px;
+  height: 130px;
+  z-index: -10;
+  background-image: url('../images/flower__bed-back.png?1402479382');
+  background-position: 65px top;
+}
+.flower__bed::after {
+  bottom: 58px;
+  height: 130px;
+  background-image: url('../images/flower__bed.png?1402479382');
+  background-position: 30px top;
+}
+.flower:hover::before, .flower:focus::before {
+  background-image: url('../images/flower-hover.png?1402479382');
+  background-position: 105px top;
+}
+.flower.is-pollinating::before {
+  background-image: url('../images/flower-is-pollinating.png?1402479382');
+  background-position: 230px 43px;
+  z-index: 1;
+}
+@media all and (min-width: 60em) {
+  .flower {
+    background-image: url('../images/flower-is-desktop.png?1402479382');
+    background-position: left 168px;
+  }
+  .flower__stem {
+    background-image: none;
+  }
+  .flower__leaves {
+    background-image: none;
+  }
+  .flower__bed::before, .flower__bed::after {
+    display: none;
+  }
+}
+@media print {
+  .flower {
+    background-image: url('../images/flower-is-print.png?1402479382');
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
