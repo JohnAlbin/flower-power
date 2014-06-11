@@ -13,7 +13,7 @@ Style guides like this should be used to aid front-end development of a website 
 
 ## Video Presentation
 
-The full presentation, “Managing Complex Projects Using Design Components”, is available from the Drupalcon 2014 website.
+The flower component is a main example used in the presentation, “Managing Complex Projects Using Design Components”. The full video of the presentation is available from the Drupalcon 2014 website.
 
 * Video: https://austin2014.drupal.org/session/managing-complex-projects-design-components
 * Slides: http://www.slideshare.net/JohnAlbin/managing-design
