@@ -1,4 +1,4 @@
-.flower, .flower__petals, .flower__face, .flower__stem::before, .flower__leaves, .flower__bed, .flower__bed::before, .flower__bed::after, .flower:hover::before, .flower:focus::before, .flower.is-pollinating::before {
+.flower, .flower__petals, .flower__face, .flower__stem::before, .flower__leaves, .flower__bed, .flower__bed::before, .flower__bed::after, .flower::before, .flower.is-pollinating::before {
   position: absolute;
   width: 588px;
   height: 561px;
@@ -53,9 +53,21 @@
   background-image: url('../images/flower__bed.png?1402479382');
   background-position: 30px top;
 }
-.flower:hover::before, .flower:focus::before {
+.flower::before {
+  background-image: none;
   background-image: url('../images/flower-hover.png?1402479382');
-  background-position: 105px top;
+  background-position: -105px 0;
+  -moz-transition: background-position 1s;
+  -o-transition: background-position 1s;
+  -webkit-transition: background-position 1s;
+  transition: background-position 1s;
+}
+.flower:hover::before, .flower:focus::before {
+  background-position: 105px 0;
+  -moz-transition: background-position 1s;
+  -o-transition: background-position 1s;
+  -webkit-transition: background-position 1s;
+  transition: background-position 1s;
 }
 .flower.is-pollinating::before {
   background-image: url('../images/flower-is-pollinating.png?1402479382');
@@ -63,17 +75,17 @@
   z-index: 1;
 }
 @media all and (min-width: 60em) {
-  .flower {
+  .flower--responsive {
     background-image: url('../images/flower-is-desktop.png?1402479382');
     background-position: left 168px;
   }
-  .flower__stem {
+  .flower--responsive .flower__stem {
     background-image: none;
   }
-  .flower__leaves {
+  .flower--responsive .flower__leaves {
     background-image: none;
   }
-  .flower__bed::before, .flower__bed::after {
+  .flower--responsive__bed::before, .flower--responsive__bed::after {
     display: none;
   }
 }

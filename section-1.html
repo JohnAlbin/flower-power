@@ -11,6 +11,7 @@
   <!--[if lt IE 9]>
   <script src="public/html5shiv.js"></script>
   <![endif]-->
+  <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
 </style>
 </head>
 <body id="kss-node">
@@ -19,7 +20,7 @@
   <div class="kss-sidebar">
     <div class="kss-sidebar-inner">
       <header class="kss-header">
-        <h2 class="kss-doc-title"><a href="./">Design Components<br>flower example<br> CSS Style Guide</a></h2>
+        <h2 class="kss-doc-title"><a href="./">Flower Power:<br>A Component Style Guide</a></h2>
       </header>
       <nav class="kss-nav">
         <ul class="kss-menu" data-kss-ref="1">
@@ -112,6 +113,26 @@ viewport width and hover over the component.</p>
           
           <div class="kss-modifier">
             <div class="kss-modifier-head">
+              <div class="kss-modifier-name">.flower--responsive</div>
+              <div class="kss-modifier-description">
+                <p>The responsive variant (includes mobile/desktop styles.)</p>
+
+              </div>
+            </div>
+            <div class="kss-modifier-example">
+              <div class="flower flower--responsive">
+  <div class="flower__petals">
+    <div class="flower__face"></div>
+  </div>
+  <div class="flower__stem">
+    <div class="flower__leaves"></div>
+  </div>
+</div>
+            </div>
+          </div>
+          
+          <div class="kss-modifier">
+            <div class="kss-modifier-head">
               <div class="kss-modifier-name">.is-pollinating</div>
               <div class="kss-modifier-description">
                 <p>A JavaScript interaction class.</p>
@@ -171,7 +192,7 @@ viewport width and hover over the component.</p>
         <div class="kss-modifier-block">
           <div class="kss-modifier kss-modifier-original">
             <div class="kss-modifier-example">
-              <div class="flower__bed">
+              <div class="flower__bed {$modifiers}__bed">
   <div class="flower {$modifiers}">
     <div class="flower__petals">
       <div class="flower__face"></div>
@@ -193,7 +214,7 @@ viewport width and hover over the component.</p>
               </div>
             </div>
             <div class="kss-modifier-example">
-              <div class="flower__bed">
+              <div class="flower__bed flower--tulip__bed">
   <div class="flower flower--tulip">
     <div class="flower__petals">
       <div class="flower__face"></div>
@@ -208,37 +229,15 @@ viewport width and hover over the component.</p>
           
           <div class="kss-modifier">
             <div class="kss-modifier-head">
-              <div class="kss-modifier-name">.is-pollinating</div>
+              <div class="kss-modifier-name">.flower--responsive</div>
               <div class="kss-modifier-description">
-                <p>A JavaScript interaction class.</p>
+                <p>The responsive variant (includes mobile/desktop styles.)</p>
 
               </div>
             </div>
             <div class="kss-modifier-example">
-              <div class="flower__bed">
-  <div class="flower is-pollinating">
-    <div class="flower__petals">
-      <div class="flower__face"></div>
-    </div>
-    <div class="flower__stem">
-      <div class="flower__leaves"></div>
-    </div>
-  </div>
-</div>
-            </div>
-          </div>
-          
-          <div class="kss-modifier">
-            <div class="kss-modifier-head">
-              <div class="kss-modifier-name">.flower--tulip.is-pollinating</div>
-              <div class="kss-modifier-description">
-                <p>A JavaScript interaction class.</p>
-
-              </div>
-            </div>
-            <div class="kss-modifier-example">
-              <div class="flower__bed">
-  <div class="flower flower--tulip is-pollinating">
+              <div class="flower__bed flower--responsive__bed">
+  <div class="flower flower--responsive">
     <div class="flower__petals">
       <div class="flower__face"></div>
     </div>
@@ -251,7 +250,7 @@ viewport width and hover over the component.</p>
           </div>
           
           <div class="kss-markup">
-            <pre><code data-language="html">&lt;div class=&quot;flower__bed&quot;&gt;
+            <pre><code data-language="html">&lt;div class=&quot;flower__bed {$modifiers}__bed&quot;&gt;
   &lt;div class=&quot;flower {$modifiers}&quot;&gt;
     &lt;div class=&quot;flower__petals&quot;&gt;
       &lt;div class=&quot;flower__face&quot;&gt;&lt;/div&gt;
