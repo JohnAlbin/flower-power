@@ -35,6 +35,7 @@
 // </div>
 //
 // .flower--tulip - The tulip variant.
+// .flower--responsive - The responsive variant (includes mobile/desktop styles.)
 // .is-pollinating - A JavaScript interaction class.
 // .flower--tulip.is-pollinating - A JavaScript interaction class.
 //
@@ -106,11 +107,17 @@
   }
 
   // Hover state.
+  &::before {
+    @extend %flower-base;
+    background-image: none;
+    background-image: image-url('flower-hover.png');
+    background-position: -105px 0;
+    @include transition(background-position 1s);
+  }
   &:hover::before,
   &:focus::before {
-    @extend %flower-base;
-    background-image: image-url('flower-hover.png');
-    background-position: 105px top;
+    background-position: 105px 0;
+    @include transition(background-position 1s);
   }
 
   &.is-pollinating::before {
@@ -121,22 +128,24 @@
   }
 
   // Media query state for desktop sized screens.
-  @media all and (min-width: 60em) {
-    // Show the desktop and vase image.
-    background-image: image-url('flower-is-desktop.png');
-    background-position: left 168px;
+  &--responsive {
+    @media all and (min-width: 60em) {
+      // Show the desktop and vase image.
+      background-image: image-url('flower-is-desktop.png');
+      background-position: left 168px;
 
-    // The stem and leaves images are included with the vase and desktop.
-    &__stem {
-      background-image: none;
-    }
-    &__leaves {
-      background-image: none;
-    }
-    // The flower bed is mobile only.
-    &__bed::before,
-    &__bed::after {
-      display: none;
+      // The stem and leaves images are included with the vase and desktop.
+      .flower__stem {
+        background-image: none;
+      }
+      .flower__leaves {
+        background-image: none;
+      }
+      // The flower bed is mobile only.
+      &__bed::before,
+      &__bed::after {
+        display: none;
+      }
     }
   }
 
@@ -149,7 +158,7 @@
 // Flower (with bed)
 //
 // Markup:
-// <div class="flower__bed">
+// <div class="flower__bed {$modifiers}__bed">
 //   <div class="flower {$modifiers}">
 //     <div class="flower__petals">
 //       <div class="flower__face"></div>
@@ -161,7 +170,6 @@
 // </div>
 //
 // .flower--tulip - The tulip variant.
-// .is-pollinating - A JavaScript interaction class.
-// .flower--tulip.is-pollinating - A JavaScript interaction class.
+// .flower--responsive - The responsive variant (includes mobile/desktop styles.)
 //
 // Styleguide 1.2
