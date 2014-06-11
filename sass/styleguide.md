@@ -11,6 +11,13 @@ Style guides like this should be used to aid front-end development of a website 
 * Focusing the front-end developer so they can visualize a design component as it is implemented.
 * Debugging an already-implemented project.
 
+# The Presentation on CSS Design Components
+
+The full presentation, “Managing Complex Projects Using Design Components” is available from the Drupalcon 2014 website.
+
+* Video: https://austin2014.drupal.org/session/managing-complex-projects-design-components
+* Slides: http://www.slideshare.net/JohnAlbin/managing-design
+
 ### Installation
 
-Installation instructions for automatically building this style guide can be found in [README.md](README.md)
+Installation instructions for automatically building this style guide can be found in the [README.md](https://github.com/JohnAlbin/flower-power/blob/master/README.md).
