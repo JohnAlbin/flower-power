@@ -1,0 +1,167 @@
+// Flower
+//
+// The Flower component is a responsive flower, with the following states:
+//
+// - mobile (the default)
+// - desktop (screen sizes larger than 60em)
+// - hover/focus
+// - is-pollinating (state triggered by JavaScript)
+//
+// To view all of these state variations, the user will need to change the
+// viewport width and hover over the component.
+//
+// Styleguide 1.0
+
+
+// Shared styling among the component parts.
+%flower-base {
+  position: absolute;
+  width: 588px;
+  height: 561px;
+  background-repeat: no-repeat;
+  content: '';
+}
+
+// Flower
+//
+// Markup:
+// <div class="flower {$modifiers}">
+//   <div class="flower__petals">
+//     <div class="flower__face"></div>
+//   </div>
+//   <div class="flower__stem">
+//     <div class="flower__leaves"></div>
+//   </div>
+// </div>
+//
+// .flower--tulip - The tulip variant.
+// .is-pollinating - A JavaScript interaction class.
+// .flower--tulip.is-pollinating - A JavaScript interaction class.
+//
+// Styleguide 1.1
+
+.flower,
+%flower {
+  @extend %flower-base;
+  position: relative;
+
+  &__petals {
+    @extend %flower-base;
+    background-image: image-url('flower__petals.png');
+    background-position: 201px top;
+
+    .flower--tulip & {
+      background-image: image-url('flower--tulip__petals.png');
+      background-position: 273px 53px;
+    }
+  }
+
+  &__face {
+    @extend %flower-base;
+    background-image: image-url('flower__face.png');
+    background-position: 282px 80px;
+
+    .flower--tulip & {
+      background-image: none;
+    }
+  }
+
+  &__stem::before {
+    @extend %flower-base;
+    background-image: image-url('flower__stem.png');
+    background-position: 231px 167px;
+    z-index: -4;
+  }
+
+  &__leaves {
+    @extend %flower-base;
+    background-image: image-url('flower__leaves.png');
+    background-position: 169px 258px;
+    z-index: -5;
+  }
+
+  &__bed {
+    @extend %flower-base;
+    position: relative;
+
+    .flower {
+      position: absolute;
+    }
+
+    &::before {
+      @extend %flower-base;
+      bottom: 58px;
+      height: 130px;
+      z-index: -10;
+      background-image: image-url('flower__bed-back.png');
+      background-position: 65px top;
+    }
+    &::after {
+      @extend %flower-base;
+      bottom: 58px;
+      height: 130px;
+      background-image: image-url('flower__bed.png');
+      background-position: 30px top;
+    }
+  }
+
+  // Hover state.
+  &:hover::before,
+  &:focus::before {
+    @extend %flower-base;
+    background-image: image-url('flower-hover.png');
+    background-position: 105px top;
+  }
+
+  &.is-pollinating::before {
+    @extend %flower-base;
+    background-image: image-url('flower-is-pollinating.png');
+    background-position: 230px 43px;
+    z-index: 1;
+  }
+
+  // Media query state for desktop sized screens.
+  @media all and (min-width: 60em) {
+    // Show the desktop and vase image.
+    background-image: image-url('flower-is-desktop.png');
+    background-position: left 168px;
+
+    // The stem and leaves images are included with the vase and desktop.
+    &__stem {
+      background-image: none;
+    }
+    &__leaves {
+      background-image: none;
+    }
+    // The flower bed is mobile only.
+    &__bed::before,
+    &__bed::after {
+      display: none;
+    }
+  }
+
+  // Media query state for printing.
+  @media print {
+    background-image: image-url('flower-is-print.png');
+  }
+}
+
+// Flower (with bed)
+//
+// Markup:
+// <div class="flower__bed">
+//   <div class="flower {$modifiers}">
+//     <div class="flower__petals">
+//       <div class="flower__face"></div>
+//     </div>
+//     <div class="flower__stem">
+//       <div class="flower__leaves"></div>
+//     </div>
+//   </div>
+// </div>
+//
+// .flower--tulip - The tulip variant.
+// .is-pollinating - A JavaScript interaction class.
+// .flower--tulip.is-pollinating - A JavaScript interaction class.
+//
+// Styleguide 1.2
