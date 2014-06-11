@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>Design Components flower example Style Guide</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="kss-node" />
+  <link rel="stylesheet" href="public/kss.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <!--[if lt IE 9]>
+  <script src="public/html5shiv.js"></script>
+  <![endif]-->
+</style>
+</head>
+<body id="kss-node">
+
+<div class="kss-wrapper">
+  <div class="kss-sidebar">
+    <div class="kss-sidebar-inner">
+      <header class="kss-header">
+        <h2 class="kss-doc-title"><a href="./">Design Components<br>flower example<br> CSS Style Guide</a></h2>
+      </header>
+      <nav class="kss-nav">
+        <ul class="kss-menu" data-kss-ref="1">
+          <li class="kss-menu-item"><a href="./"><span class="kss-ref">0</span><span class="kss-name">Overview</span></a></li>
+          
+          <li class="kss-menu-item"><a href="section-1.html"><span class="kss-ref">1</span><span class="kss-name">Flower</span></a></li>
+          
+        </ul>
+        
+        <ul class="kss-menu-child">
+          
+          
+          
+          
+          <li class="kss-menu-item"><a href="#section-1.1"><span class="kss-ref">1.1</span><span class="kss-name">Flower</span></a></li>
+          
+          
+          
+          <li class="kss-menu-item"><a href="#section-1.2"><span class="kss-ref">1.2</span><span class="kss-name">Flower (with bed)</span></a></li>
+          
+          
+          
+          <li class="kss-menu-item"><a href="#section-1.3"><span class="kss-ref">1.3</span><span class="kss-name">Flower (deconstructed)</span></a></li>
+          
+          
+        </ul>
+        
+      </nav>
+    </div>
+  </div>
+  <div class="kss-content">
+    <article class="kss-article">
+      
+      
+      <section id="section-1" class="kss-section kss-depth-1">
+        <h1 class="kss-title kss-title--level1"><a class="kss-permalink" href="#section-1"><span class="kss-ref">1</span> Flower <span class="kss-permalink__hash">#permalink</span></a></h1>
+        
+        
+        <div class="kss-description">
+          <p>The Flower component is a responsive flower, with the following states:
+
+</p>
+<ul>
+<li>mobile (the default)</li>
+<li>desktop (screen sizes larger than 60em)</li>
+<li>hover/focus</li>
+<li>is-pollinating (state triggered by JavaScript)</li>
+</ul>
+<p>To view all of these state variations, the user will need to change the
+viewport width and hover over the component.</p>
+
+        </div>
+        
+        
+      </section>
+      
+      <section id="section-1.1" class="kss-section kss-depth-2">
+        <h2 class="kss-title kss-title--level2"><a class="kss-permalink" href="#section-1.1"><span class="kss-ref">1.1</span> Flower <span class="kss-permalink__hash">#permalink</span></a></h2>
+        
+        
+        <div class="kss-modifier-block">
+          <div class="kss-modifier kss-modifier-original">
+            <div class="kss-modifier-example">
+              <div class="flower {$modifiers}">
+  <div class="flower__petals">
+    <div class="flower__face"></div>
+  </div>
+  <div class="flower__stem">
+    <div class="flower__leaves"></div>
+  </div>
+</div>
+            </div>
+          </div>
+          
+          <div class="kss-modifier">
+            <div class="kss-modifier-head">
+              <div class="kss-modifier-name">.flower--tulip</div>
+              <div class="kss-modifier-description">
+                <p>The tulip variant.</p>
+
+              </div>
+            </div>
+            <div class="kss-modifier-example">
+              <div class="flower flower--tulip">
+  <div class="flower__petals">
+    <div class="flower__face"></div>
+  </div>
+  <div class="flower__stem">
+    <div class="flower__leaves"></div>
+  </div>
+</div>
+            </div>
+          </div>
+          
+          <div class="kss-modifier">
+            <div class="kss-modifier-head">
+              <div class="kss-modifier-name">.is-pollinating</div>
+              <div class="kss-modifier-description">
+                <p>A JavaScript interaction class.</p>
+
+              </div>
+            </div>
+            <div class="kss-modifier-example">
+              <div class="flower is-pollinating">
+  <div class="flower__petals">
+    <div class="flower__face"></div>
+  </div>
+  <div class="flower__stem">
+    <div class="flower__leaves"></div>
+  </div>
+</div>
+            </div>
+          </div>
+          
+          <div class="kss-modifier">
+            <div class="kss-modifier-head">
+              <div class="kss-modifier-name">.flower--tulip.is-pollinating</div>
+              <div class="kss-modifier-description">
+                <p>A JavaScript interaction class.</p>
+
+              </div>
+            </div>
+            <div class="kss-modifier-example">
+              <div class="flower flower--tulip is-pollinating">
+  <div class="flower__petals">
+    <div class="flower__face"></div>
+  </div>
+  <div class="flower__stem">
+    <div class="flower__leaves"></div>
+  </div>
+</div>
+            </div>
+          </div>
+          
+          <div class="kss-markup">
+            <pre><code data-language="html">&lt;div class=&quot;flower {$modifiers}&quot;&gt;
+  &lt;div class=&quot;flower__petals&quot;&gt;
+    &lt;div class=&quot;flower__face&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;flower__stem&quot;&gt;
+    &lt;div class=&quot;flower__leaves&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+        
+      </section>
+      
+      <section id="section-1.2" class="kss-section kss-depth-2">
+        <h2 class="kss-title kss-title--level2"><a class="kss-permalink" href="#section-1.2"><span class="kss-ref">1.2</span> Flower (with bed) <span class="kss-permalink__hash">#permalink</span></a></h2>
+        
+        
+        <div class="kss-modifier-block">
+          <div class="kss-modifier kss-modifier-original">
+            <div class="kss-modifier-example">
+              <div class="flower__bed">
+  <div class="flower {$modifiers}">
+    <div class="flower__petals">
+      <div class="flower__face"></div>
+    </div>
+    <div class="flower__stem">
+      <div class="flower__leaves"></div>
+    </div>
+  </div>
+</div>
+            </div>
+          </div>
+          
+          <div class="kss-modifier">
+            <div class="kss-modifier-head">
+              <div class="kss-modifier-name">.flower--tulip</div>
+              <div class="kss-modifier-description">
+                <p>The tulip variant.</p>
+
+              </div>
+            </div>
+            <div class="kss-modifier-example">
+              <div class="flower__bed">
+  <div class="flower flower--tulip">
+    <div class="flower__petals">
+      <div class="flower__face"></div>
+    </div>
+    <div class="flower__stem">
+      <div class="flower__leaves"></div>
+    </div>
+  </div>
+</div>
+            </div>
+          </div>
+          
+          <div class="kss-modifier">
+            <div class="kss-modifier-head">
+              <div class="kss-modifier-name">.is-pollinating</div>
+              <div class="kss-modifier-description">
+                <p>A JavaScript interaction class.</p>
+
+              </div>
+            </div>
+            <div class="kss-modifier-example">
+              <div class="flower__bed">
+  <div class="flower is-pollinating">
+    <div class="flower__petals">
+      <div class="flower__face"></div>
+    </div>
+    <div class="flower__stem">
+      <div class="flower__leaves"></div>
+    </div>
+  </div>
+</div>
+            </div>
+          </div>
+          
+          <div class="kss-modifier">
+            <div class="kss-modifier-head">
+              <div class="kss-modifier-name">.flower--tulip.is-pollinating</div>
+              <div class="kss-modifier-description">
+                <p>A JavaScript interaction class.</p>
+
+              </div>
+            </div>
+            <div class="kss-modifier-example">
+              <div class="flower__bed">
+  <div class="flower flower--tulip is-pollinating">
+    <div class="flower__petals">
+      <div class="flower__face"></div>
+    </div>
+    <div class="flower__stem">
+      <div class="flower__leaves"></div>
+    </div>
+  </div>
+</div>
+            </div>
+          </div>
+          
+          <div class="kss-markup">
+            <pre><code data-language="html">&lt;div class=&quot;flower__bed&quot;&gt;
+  &lt;div class=&quot;flower {$modifiers}&quot;&gt;
+    &lt;div class=&quot;flower__petals&quot;&gt;
+      &lt;div class=&quot;flower__face&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;flower__stem&quot;&gt;
+      &lt;div class=&quot;flower__leaves&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+        
+      </section>
+      
+      <section id="section-1.3" class="kss-section kss-depth-2">
+        <h2 class="kss-title kss-title--level2"><a class="kss-permalink" href="#section-1.3"><span class="kss-ref">1.3</span> Flower (deconstructed) <span class="kss-permalink__hash">#permalink</span></a></h2>
+        
+        
+        <div class="kss-modifier-block">
+          <div class="kss-modifier kss-modifier-original">
+            <div class="kss-modifier-example">
+              <div style="position: relative; height: 561px">
+  <div class="{$modifiers}"></div>
+</div>
+            </div>
+          </div>
+          
+          <div class="kss-modifier">
+            <div class="kss-modifier-head">
+              <div class="kss-modifier-name">.flower__bed</div>
+              <div class="kss-modifier-description">
+                <p>The flower__bed element.</p>
+
+              </div>
+            </div>
+            <div class="kss-modifier-example">
+              <div style="position: relative; height: 561px">
+  <div class="flower__bed"></div>
+</div>
+            </div>
+          </div>
+          
+          <div class="kss-modifier">
+            <div class="kss-modifier-head">
+              <div class="kss-modifier-name">.flower__petals</div>
+              <div class="kss-modifier-description">
+                <p>The flower__petals element.</p>
+
+              </div>
+            </div>
+            <div class="kss-modifier-example">
+              <div style="position: relative; height: 561px">
+  <div class="flower__petals"></div>
+</div>
+            </div>
+          </div>
+          
+          <div class="kss-modifier">
+            <div class="kss-modifier-head">
+              <div class="kss-modifier-name">.flower__face</div>
+              <div class="kss-modifier-description">
+                <p>The flower__face element.</p>
+
+              </div>
+            </div>
+            <div class="kss-modifier-example">
+              <div style="position: relative; height: 561px">
+  <div class="flower__face"></div>
+</div>
+            </div>
+          </div>
+          
+          <div class="kss-modifier">
+            <div class="kss-modifier-head">
+              <div class="kss-modifier-name">.flower__stem</div>
+              <div class="kss-modifier-description">
+                <p>The flower__stem element.</p>
+
+              </div>
+            </div>
+            <div class="kss-modifier-example">
+              <div style="position: relative; height: 561px">
+  <div class="flower__stem"></div>
+</div>
+            </div>
+          </div>
+          
+          <div class="kss-modifier">
+            <div class="kss-modifier-head">
+              <div class="kss-modifier-name">.flower__leaves</div>
+              <div class="kss-modifier-description">
+                <p>The flower__leaves element.</p>
+
+              </div>
+            </div>
+            <div class="kss-modifier-example">
+              <div style="position: relative; height: 561px">
+  <div class="flower__leaves"></div>
+</div>
+            </div>
+          </div>
+          
+          <div class="kss-markup">
+            <pre><code data-language="html">&lt;div style=&quot;position: relative; height: 561px&quot;&gt;
+  &lt;div class=&quot;{$modifiers}&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+        
+      </section>
+      
+      
+    </article>
+    <footer class="kss-footer">
+      Designs © 2014 John Albin Wilkins. All rights reserved.
+    </footer>
+  </div>
+</div>
+<script src="public/jquery-1.9.1.min.js"></script>
+<!--[if gt IE 8]><!-->
+<script src="public/rainbow.min.js"></script>
+<!--<![endif]-->
+<script src="public/main.min.js"></script>
+
+<!--
+Automatically generated using <a href="https://github.com/hughsk/kss-node">kss-node</a>
+and <a href="https://github.com/htanjo/kss-node-template">kss-node-template</a>.
+-->
+
+</body>
+</html>
