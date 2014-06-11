@@ -5,6 +5,9 @@ echo -n "Deleting previous styleguide..."
 rm -rf public *.html
 echo " done."
 
+# Build the CSS with Bundler, Sass and Compass.
+bundle exec compass compile
+
 # Build the styleguide using kss-node.
 # kss-node [source files to parse] [destination folder] --template [location of template files]
 ./node_modules/.bin/kss-node ./sass ./ --template ./template;
