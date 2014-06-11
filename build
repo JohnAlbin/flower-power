@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Remove the styleguide from previous builds.
+echo -n "Deleting previous styleguide..."
+rm -rf public *.html
+echo " done."
+
+# Build the styleguide using kss-node.
+# kss-node [source files to parse] [destination folder] --template [location of template files]
+./node_modules/.bin/kss-node ./sass ./ --template ./template;
