@@ -20,6 +20,6 @@ The flower component is a main example used in the presentation, “Managing Com
 * Video: https://austin2014.drupal.org/session/managing-complex-projects-design-components
 * Slides: http://www.slideshare.net/JohnAlbin/managing-design
 
-## Installation and Source files
+## Installation and Source Code
 
-The source files used to generate this style guide are available in the [Flower Power project on GitHub](https://github.com/JohnAlbin/flower-power). Installation instructions for automatically building this style guide can be found in the [README.md](https://github.com/JohnAlbin/flower-power/blob/master/README.md).
+The source files used to generate this style guide are available in the [Flower Power project on GitHub](https://github.com/JohnAlbin/flower-power). Installation instructions for automatically building this style guide can be found in the README.md.
