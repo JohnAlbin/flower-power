@@ -4,7 +4,7 @@
   "description": "Flower Power: Deconstruction of a design component",
   "main": "index.js",
   "dependencies": {
-    "kss": "^0.3.7"
+    "kss": "kss-node/kss-node"
   },
   "devDependencies": {},
   "scripts": {
