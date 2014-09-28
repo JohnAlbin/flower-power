@@ -280,4 +280,33 @@
       background-image: none;
     }
   }
+
+// Flower (at night)
+//
+// Markup:
+// <div class="is-night">
+//   <div class="flower">
+//     <div class="flower__petals">
+//       <div class="flower__face"></div>
+//     </div>
+//     <div class="flower__stem">
+//       <div class="flower__leaves"></div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 1.3
+
+  .is-night & {
+    background-image: image-url('flower-is-night.png');
+    background-position: 167px 0;
+
+    // The stem, leaves and petals images are included with component.
+    .flower__stem::before {
+      background-image: none;
+    }
+    * {
+      background-image: none;
+    }
+  }
 }
