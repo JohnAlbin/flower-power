@@ -58,6 +58,7 @@
 //
 // .flower--tulip - The tulip variant.
 // .flower--responsive - The responsive variant (includes mobile/desktop styles.)
+// .flower--print - The print variant (also used for @media print styles.)
 // .is-pollinating - A JavaScript interaction class.
 // .flower--tulip.is-pollinating - A JavaScript interaction class.
 //
@@ -258,6 +259,17 @@
 
   // Media query state for printing.
   @media print {
+    background-image: image-url('flower-is-print.png');
+
+    // The stem, leaves and petals images are included with component.
+    .flower__stem::before {
+      background-image: none;
+    }
+    * {
+      background-image: none;
+    }
+  }
+  &--print {
     background-image: image-url('flower-is-print.png');
 
     // The stem, leaves and petals images are included with component.
