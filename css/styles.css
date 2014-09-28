@@ -79,7 +79,7 @@
     background-image: url('../images/flower-is-desktop.png?1402479382');
     background-position: left 168px;
   }
-  .flower--responsive .flower__stem {
+  .flower--responsive .flower__stem::before {
     background-image: none;
   }
   .flower--responsive .flower__leaves {
@@ -93,6 +93,31 @@
   .flower {
     background-image: url('../images/flower-is-print.png?1402479382');
   }
+  .flower .flower__stem::before {
+    background-image: none;
+  }
+  .flower * {
+    background-image: none;
+  }
+}
+.flower--print {
+  background-image: url('../images/flower-is-print.png?1402479382');
+}
+.flower--print .flower__stem::before {
+  background-image: none;
+}
+.flower--print * {
+  background-image: none;
+}
+.is-night .flower {
+  background-image: url('../images/flower-is-night.png?1411894253');
+  background-position: 167px 0;
+}
+.is-night .flower .flower__stem::before {
+  background-image: none;
+}
+.is-night .flower * {
+  background-image: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
