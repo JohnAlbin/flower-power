@@ -4,7 +4,7 @@
 
 Design components are en emerging standard on how to build web sites and apps. By thinking about full “page” designs as a collage of independent design “components”, we can build leaner and more maintanable CSS. **The “flower” component is a visual metaphor to more easily explain how to build a design component.**
 
-Using [kss-node](https://github.com/hughsk/kss-node), the style guide for the flower component is auto-generated from comments in the source stylesheets (Sass, in this case).
+Using [kss-node](https://github.com/kss-node/kss-node), the style guide for the flower component is auto-generated from comments in the source stylesheets (Sass, in this case).
 
 Style guides like this should be used to aid front-end development of a website or app. They can aid in:
 
