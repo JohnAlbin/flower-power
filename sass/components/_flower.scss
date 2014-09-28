@@ -1,3 +1,7 @@
+// NOTE: Since this is an example style guide, we have way more documentation for this
+// component than usual.
+
+
 // Flower
 //
 // The Flower component is a responsive flower, with the following states:
@@ -11,6 +15,24 @@
 // viewport width and hover over the component.
 //
 // Styleguide 1.0
+
+// Flower (deconstructed)
+//
+// The flower component is constructed of several CSS elements. The component can also be applied to a variety of different collections of HTML; the markup below is just one example.
+//
+// Markup:
+// <div class="flower__bed">
+//   <div class="flower">
+//     <div class="flower__petals">
+//       <div class="flower__face"></div>
+//     </div>
+//     <div class="flower__stem">
+//       <div class="flower__leaves"></div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 2.0
 
 
 // Shared styling among the component parts.
@@ -41,6 +63,101 @@
 //
 // Styleguide 1.1
 
+// Flower (base element)
+//
+// The base class name for the component is `.flower`. To see the CSS that is applied to it, use your browser's DOM inspector.
+//
+// Markup:
+// <div class="flower"></div>
+//
+// Styleguide 2.1
+
+.flower,
+%flower {
+  @extend %flower-base;
+  position: relative;
+
+// Flower petals
+//
+// The `.flower__petals` element.
+//
+// Markup:
+// <div class="{$modifiers}" style="position: relative; height: 561px">
+//   <div class="flower__petals"></div>
+// </div>
+//
+// .flower--tulip - The tulip variation causes the `.flower__petals` to display differently.
+//
+// Styleguide 2.2
+
+  &__petals {
+    @extend %flower-base;
+    background-image: image-url('flower__petals.png');
+    background-position: 201px top;
+
+    .flower--tulip & {
+      background-image: image-url('flower--tulip__petals.png');
+      background-position: 273px 53px;
+    }
+  }
+
+// Flower face
+//
+// The `.flower__face` element.
+//
+// Markup:
+// <div style="position: relative; height: 561px">
+//   <div class="flower__face"></div>
+// </div>
+//
+// Styleguide 2.3
+
+  &__face {
+    @extend %flower-base;
+    background-image: image-url('flower__face.png');
+    background-position: 282px 80px;
+
+    .flower--tulip & {
+      background-image: none;
+    }
+  }
+
+// Flower stem
+//
+// The `.flower__stem` element.
+//
+// Markup:
+// <div style="position: relative; height: 561px">
+//   <div class="flower__stem"></div>
+// </div>
+//
+// Styleguide 2.4
+
+  &__stem::before {
+    @extend %flower-base;
+    background-image: image-url('flower__stem.png');
+    background-position: 231px 167px;
+    z-index: -4;
+  }
+
+// Flower leaves
+//
+// The `.flower__leaves` element.
+//
+// Markup:
+// <div style="position: relative; height: 561px">
+//   <div class="flower__leaves"></div>
+// </div>
+//
+// Styleguide 2.5
+
+  &__leaves {
+    @extend %flower-base;
+    background-image: image-url('flower__leaves.png');
+    background-position: 169px 258px;
+    z-index: -5;
+  }
+
 // Flower (with bed)
 //
 // Markup:
@@ -60,45 +177,16 @@
 //
 // Styleguide 1.2
 
-.flower,
-%flower {
-  @extend %flower-base;
-  position: relative;
-
-  &__petals {
-    @extend %flower-base;
-    background-image: image-url('flower__petals.png');
-    background-position: 201px top;
-
-    .flower--tulip & {
-      background-image: image-url('flower--tulip__petals.png');
-      background-position: 273px 53px;
-    }
-  }
-
-  &__face {
-    @extend %flower-base;
-    background-image: image-url('flower__face.png');
-    background-position: 282px 80px;
-
-    .flower--tulip & {
-      background-image: none;
-    }
-  }
-
-  &__stem::before {
-    @extend %flower-base;
-    background-image: image-url('flower__stem.png');
-    background-position: 231px 167px;
-    z-index: -4;
-  }
-
-  &__leaves {
-    @extend %flower-base;
-    background-image: image-url('flower__leaves.png');
-    background-position: 169px 258px;
-    z-index: -5;
-  }
+// Flower bed
+//
+// The `.flower__bed` element.
+//
+// Markup:
+// <div style="position: relative; height: 561px">
+//   <div class="flower__bed"></div>
+// </div>
+//
+// Styleguide 2.6
 
   &__bed {
     @extend %flower-base;
@@ -173,93 +261,3 @@
     background-image: image-url('flower-is-print.png');
   }
 }
-
-
-
-// Since this is an example style guide, we have way more documentation for this
-// component than usual.
-
-
-// Flower (deconstructed)
-//
-// The flower component is constructed of several CSS elements. The component can also be applied to a variety of different collections of HTML; the markup below is just one example.
-//
-// Markup:
-// <div class="flower__bed">
-//   <div class="flower">
-//     <div class="flower__petals">
-//       <div class="flower__face"></div>
-//     </div>
-//     <div class="flower__stem">
-//       <div class="flower__leaves"></div>
-//     </div>
-//   </div>
-// </div>
-//
-// Styleguide 2.0
-
-// .flower
-//
-// The base class name for the component is `.flower`. To see the CSS that is applied to it, use your browser's DOM inspector.
-//
-// Markup:
-// <div class="flower"></div>
-//
-// Styleguide 2.1
-
-// .flower__petals
-//
-// The `.flower__petals` element.
-//
-// Markup:
-// <div class="{$modifiers}" style="position: relative; height: 561px">
-//   <div class="flower__petals"></div>
-// </div>
-//
-// .flower--tulip - The tulip variation causes the `.flower__petals` to display differently.
-//
-// Styleguide 2.2
-
-// .flower__face
-//
-// The `.flower__face` element.
-//
-// Markup:
-// <div style="position: relative; height: 561px">
-//   <div class="flower__face"></div>
-// </div>
-//
-// Styleguide 2.3
-
-// .flower__stem
-//
-// The `.flower__stem` element.
-//
-// Markup:
-// <div style="position: relative; height: 561px">
-//   <div class="flower__stem"></div>
-// </div>
-//
-// Styleguide 2.4
-
-// .flower__leaves
-//
-// The `.flower__leaves` element.
-//
-// Markup:
-// <div style="position: relative; height: 561px">
-//   <div class="flower__leaves"></div>
-// </div>
-//
-// Styleguide 2.5
-
-// .flower__bed
-//
-// The `.flower__bed` element.
-//
-// Markup:
-// <div style="position: relative; height: 561px">
-//   <div class="flower__bed"></div>
-// </div>
-//
-// Styleguide 2.6
