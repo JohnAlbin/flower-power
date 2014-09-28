@@ -242,7 +242,7 @@
       background-position: left 168px;
 
       // The stem and leaves images are included with the vase and desktop.
-      .flower__stem {
+      .flower__stem::before {
         background-image: none;
       }
       .flower__leaves {
@@ -259,5 +259,13 @@
   // Media query state for printing.
   @media print {
     background-image: image-url('flower-is-print.png');
+
+    // The stem, leaves and petals images are included with component.
+    .flower__stem::before {
+      background-image: none;
+    }
+    * {
+      background-image: none;
+    }
   }
 }
