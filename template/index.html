@@ -33,9 +33,9 @@
         {{else}}
         <ul class="kss-menu-child">
           {{#eachSection rootNumber}}
-          {{#whenDepth 2}}
+          {{#ifDepth 2}}
           <li class="kss-menu-item"><a href="#section-{{reference}}"><span class="kss-ref">{{reference}}</span><span class="kss-name">{{header}}</span></a></li>
-          {{/whenDepth}}
+          {{/ifDepth}}
           {{/eachSection}}
         </ul>
         {{/if}}
@@ -46,22 +46,22 @@
     <article class="kss-article">
       {{#if overview}}
       <section id="section-0" class="kss-section kss-overview">
-        {{html overview}}
+        {{{overview}}}
       </section>
       {{else}}
       {{#eachSection rootNumber}}
       <section id="section-{{reference}}" class="kss-section kss-depth-{{refDepth}}">
         <h{{refDepth}} class="kss-title kss-title--level{{refDepth}}"><a class="kss-permalink" href="#section-{{reference}}"><span class="kss-ref">{{reference}}</span> {{header}} <span class="kss-permalink__hash">#permalink</span></a></h{{refDepth}}>
-        {{#ifAny markup modifiers}}
+        {{#if markup}}
         {{#if description}}
         <div class="kss-description">
-          {{html description}}
+          {{{description}}}
         </div>
         {{/if}}
         <div class="kss-modifier-block">
           <div class="kss-modifier kss-modifier-original">
             <div class="kss-modifier-example">
-              {{modifierMarkup}}
+              {{{markup}}}
             </div>
           </div>
           {{#eachModifier}}
@@ -69,11 +69,11 @@
             <div class="kss-modifier-head">
               <div class="kss-modifier-name">{{name}}</div>
               <div class="kss-modifier-description">
-                {{html description}}
+                {{{description}}}
               </div>
             </div>
             <div class="kss-modifier-example">
-              {{modifierMarkup}}
+              {{{markup}}}
             </div>
           </div>
           {{/eachModifier}}
@@ -84,10 +84,10 @@
         {{else}}
         {{#if description}}
         <div class="kss-description">
-          {{html description}}
+          {{{description}}}
         </div>
         {{/if}}
-        {{/ifAny}}
+        {{/if}}
       </section>
       {{/eachSection}}
       {{/if}}

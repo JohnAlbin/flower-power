@@ -18,7 +18,9 @@
 
 // Flower (deconstructed)
 //
-// The flower component is constructed of several CSS elements. The component can also be applied to a variety of different collections of HTML; the markup below is just one example.
+// The flower component is constructed of several CSS elements. The component
+// can also be applied to a variety of different collections of HTML; the markup
+// below is just one example.
 //
 // Markup:
 // <div class="flower__bed">
@@ -47,7 +49,7 @@
 // Flower
 //
 // Markup:
-// <div class="flower {$modifiers}">
+// <div class="flower {{modifier_class}}">
 //   <div class="flower__petals">
 //     <div class="flower__face"></div>
 //   </div>
@@ -83,7 +85,7 @@
 // The `.flower__petals` element.
 //
 // Markup:
-// <div class="{$modifiers}" style="position: relative; height: 561px">
+// <div class="{{modifier_class}}" style="position: relative; height: 561px">
 //   <div class="flower__petals"></div>
 // </div>
 //
@@ -162,8 +164,8 @@
 // Flower (with bed)
 //
 // Markup:
-// <div class="flower__bed {$modifiers}__bed">
-//   <div class="flower {$modifiers}">
+// <div class="flower__bed {{modifier_class}}__bed">
+//   <div class="flower {{modifier_class}}">
 //     <div class="flower__petals">
 //       <div class="flower__face"></div>
 //     </div>
