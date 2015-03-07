@@ -1,40 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lte IE 6]>            <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IEMobile 7]>          <html class="no-js iem7" lang="en"> <![endif]-->
+<!--[if (IE 7)&(!IEMobile)]>  <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>                <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <title>Design Components flower example Style Guide</title>
-  <meta name="description" content="" />
-  <meta name="generator" content="kss-node" />
-  <link rel="stylesheet" href="public/kss.css" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <!--[if lt IE 9]>
-  <script src="public/html5shiv.js"></script>
-  <![endif]-->
-  <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
-</style>
+  <meta charset="utf-8">
+  <title>KSS: Living Style Guide</title>
+
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="public/kss.css">
+  <link rel="stylesheet" href="css/styles.css">
+
 </head>
 <body id="kss-node">
 
-<div class="kss-wrapper">
-  <div class="kss-sidebar">
-    <div class="kss-sidebar-inner">
-      <header class="kss-header">
-        <h2 class="kss-doc-title"><a href="./">Flower Power:<br>A Component<br>Style Guide</a></h2>
-      </header>
-      <nav class="kss-nav">
-        <ul class="kss-menu" data-kss-ref="styleguide.homepage">
-          <li class="kss-menu-item"><a href="./"><span class="kss-ref">0</span><span class="kss-name">Overview</span></a></li>
-          <li class="kss-menu-item"><a href="section-1.html"><span class="kss-ref">1</span><span class="kss-name">Flower</span></a></li>
-          <li class="kss-menu-item"><a href="section-2.html"><span class="kss-ref">2</span><span class="kss-name">Flower (deconstructed)</span></a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-  <div class="kss-content">
-    <article class="kss-article">
-      <section id="section-0" class="kss-section kss-overview">
-         <h1 id="the-flower-power-component-style-guide">The “Flower Power” Component Style Guide</h1>
+<div class="kss-sidebar kss-style">
+  <header class="kss-header">
+    <h1 class="kss-doc-title">kss-node<br>Style Guide</h1>
+  </header>
+  <nav class="kss-nav">
+    <ul class="kss-nav__menu">
+      <li class="kss-nav__menu-item">
+        <a href="./">
+          <span class="kss-nav__ref">0</span
+          ><span class="kss-nav__name">Overview</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-flower.html">
+          <span class="kss-nav__ref">1</span
+          ><span class="kss-nav__name">Flower</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-deconstructed.html">
+          <span class="kss-nav__ref">2</span
+          ><span class="kss-nav__name">Flower (deconstructed)</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<article role="main" class="kss-main">
+  <div id="kssref-0" class="kss-section kss-section--depth-0 kss-overview kss-style">
+     <h1 id="the-flower-power-component-style-guide">The “Flower Power” Component Style Guide</h1>
 <p><img src="images/flower.png" alt="The fully rendered Flower component" style="float: right; margin: 0 0 20px 20px"></p>
 <p>Design components are en emerging standard on how to build web sites and apps. By thinking about full “page” designs as a collage of independent design “components”, we can build leaner and more maintanable CSS. <strong>The “flower” component is a visual metaphor to more easily explain how to build a design component.</strong></p>
 <p>Using <a href="https://github.com/kss-node/kss-node">kss-node</a>, the style guide for the flower component is auto-generated from comments in the source stylesheets (Sass, in this case).</p>
@@ -54,23 +67,18 @@
 <h2 id="installation-and-source-code">Installation and Source Code</h2>
 <p>The source files used to generate this style guide are available in the <a href="https://github.com/JohnAlbin/flower-power">Flower Power project on GitHub</a>. Installation instructions for automatically building this style guide can be found in the README.md.</p>
 
-      </section>
-    </article>
-    <footer class="kss-footer">
-      Designs © 2014 John Albin Wilkins. All rights reserved.
-    </footer>
   </div>
-</div>
-<script src="public/jquery-1.9.1.min.js"></script>
-<!--[if gt IE 8]><!-->
-<script src="public/rainbow.min.js"></script>
-<!--<![endif]-->
-<script src="public/main.min.js"></script>
+</article>
 
-<!--
-Automatically generated using <a href="https://github.com/hughsk/kss-node">kss-node</a>
-and <a href="https://github.com/htanjo/kss-node-template">kss-node-template</a>.
--->
+<!-- SCRIPTS -->
+<script src="public/kss.js"></script>
+<script src="public/prettify.js"></script>
+<script>
+  prettyPrint();
+</script>
 
+
+
+<!-- Automatically generated using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
 </body>
 </html>
