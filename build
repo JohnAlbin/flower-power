@@ -1,13 +1,23 @@
 #!/bin/bash
 
+# Usage: ./build
+
 # Remove the styleguide from previous builds.
 echo -n "Deleting previous styleguide..."
 rm -rf public *.html
 echo " done."
+
+# Check if bundle and npm install have been run.
+if [[ ! -e ./node_modules ]]; then
+  echo "Installing gems and node modules..."
+  bundle install
+  npm install
+  echo "Installation complete."
+fi
 
 # Build the CSS with Bundler, Sass and Compass.
 bundle exec compass compile
 
 # Build the styleguide using kss-node.
 # kss-node [source files to parse] [destination folder] --template [location of template files]
-./node_modules/.bin/kss-node ./sass ./ --template ./template;
+./node_modules/.bin/kss-node --config style-guide-config.json;

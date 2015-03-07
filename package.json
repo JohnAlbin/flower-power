@@ -4,14 +4,14 @@
   "description": "Flower Power: Deconstruction of a design component",
   "main": "index.js",
   "dependencies": {
-    "kss": "^2.0.0-alpha.1"
+    "kss": "^2.0"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "John Albin Wilkins",
-  "license": "© 2014 John Albin Wilkins. All rights reserved.",
+  "license": "© 2015 John Albin Wilkins. All rights reserved.",
   "repository": {
     "type": "git",
     "url": "git@github.com:JohnAlbin/flower-power"

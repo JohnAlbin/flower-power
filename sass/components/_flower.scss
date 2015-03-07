@@ -1,5 +1,5 @@
-// NOTE: Since this is an example style guide, we have way more documentation for this
-// component than usual.
+// NOTE: Since this is an example style guide, we have way more documentation
+// for this component than usual.
 
 
 // Flower
@@ -14,7 +14,7 @@
 // To view all of these state variations, the user will need to change the
 // viewport width and hover over the component.
 //
-// Styleguide 1.0
+// Style guide: flower
 
 // Flower (deconstructed)
 //
@@ -34,7 +34,9 @@
 //   </div>
 // </div>
 //
-// Styleguide 2.0
+// Weight: 1
+//
+// Style guide: deconstructed
 
 
 // Shared styling among the component parts.
@@ -64,7 +66,7 @@
 // .is-pollinating - A JavaScript interaction class.
 // .flower--tulip.is-pollinating - A JavaScript interaction class.
 //
-// Styleguide 1.1
+// Style guide: flower.base
 
 // Flower (base element)
 //
@@ -73,7 +75,7 @@
 // Markup:
 // <div class="flower"></div>
 //
-// Styleguide 2.1
+// Style guide: deconstructed.base
 
 .flower,
 %flower {
@@ -91,7 +93,7 @@
 //
 // .flower--tulip - The tulip variation causes the `.flower__petals` to display differently.
 //
-// Styleguide 2.2
+// Style guide: deconstructed.petals
 
   &__petals {
     @extend %flower-base;
@@ -113,7 +115,7 @@
 //   <div class="flower__face"></div>
 // </div>
 //
-// Styleguide 2.3
+// Style guide: deconstructed.face
 
   &__face {
     @extend %flower-base;
@@ -134,7 +136,7 @@
 //   <div class="flower__stem"></div>
 // </div>
 //
-// Styleguide 2.4
+// Style guide: deconstructed.stem
 
   &__stem::before {
     @extend %flower-base;
@@ -152,7 +154,7 @@
 //   <div class="flower__leaves"></div>
 // </div>
 //
-// Styleguide 2.5
+// Style guide: deconstructed.leaves
 
   &__leaves {
     @extend %flower-base;
@@ -178,7 +180,7 @@
 // .flower--tulip - The tulip variant.
 // .flower--responsive - The responsive variant (includes mobile/desktop styles.)
 //
-// Styleguide 1.2
+// Style guide: flower.bed
 
 // Flower bed
 //
@@ -189,7 +191,7 @@
 //   <div class="flower__bed"></div>
 // </div>
 //
-// Styleguide 2.6
+// Style guide: deconstructed.bed
 
   &__bed {
     @extend %flower-base;
@@ -297,7 +299,7 @@
 //   </div>
 // </div>
 //
-// Styleguide 1.3
+// Style guide: flower.skin-night
 
   .is-night & {
     background-image: image-url('flower-is-night.png');
