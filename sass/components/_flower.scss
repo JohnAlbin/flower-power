@@ -34,9 +34,7 @@
 //   </div>
 // </div>
 //
-// Weight: 1
-//
-// Style guide: deconstructed
+// Style guide: flower-deconstructed
 
 
 // Shared styling among the component parts.
@@ -75,7 +73,7 @@
 // Markup:
 // <div class="flower"></div>
 //
-// Style guide: deconstructed.base
+// Style guide: flower-deconstructed.base
 
 .flower,
 %flower {
@@ -93,7 +91,7 @@
 //
 // .flower--tulip - The tulip variation causes the `.flower__petals` to display differently.
 //
-// Style guide: deconstructed.petals
+// Style guide: flower-deconstructed.petals
 
   &__petals {
     @extend %flower-base;
@@ -115,7 +113,7 @@
 //   <div class="flower__face"></div>
 // </div>
 //
-// Style guide: deconstructed.face
+// Style guide: flower-deconstructed.face
 
   &__face {
     @extend %flower-base;
@@ -136,7 +134,7 @@
 //   <div class="flower__stem"></div>
 // </div>
 //
-// Style guide: deconstructed.stem
+// Style guide: flower-deconstructed.stem
 
   &__stem::before {
     @extend %flower-base;
@@ -154,7 +152,7 @@
 //   <div class="flower__leaves"></div>
 // </div>
 //
-// Style guide: deconstructed.leaves
+// Style guide: flower-deconstructed.leaves
 
   &__leaves {
     @extend %flower-base;
@@ -191,7 +189,7 @@
 //   <div class="flower__bed"></div>
 // </div>
 //
-// Style guide: deconstructed.bed
+// Style guide: flower-deconstructed.bed
 
   &__bed {
     @extend %flower-base;
