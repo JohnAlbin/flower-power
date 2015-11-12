@@ -262,11 +262,23 @@
 
     @media screen and (min-width: 769px) {
       display: block;
-      margin: 10px 0;
-      border-top: 1px solid #ccc;
-      border-bottom: 1px solid #ccc;
-      padding: 10px 0;
       list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      // @TODO: The ul is output even when there are no children. Fix this, so
+      // we can put these :first-child and :last child styles back on the ul.
+      li:first-child {
+        margin: 10px 0 0;
+        border-top: 1px solid #ccc;
+        padding: 10px 0 0;
+      }
+
+      li:last-child {
+        margin: 0 0 10px;
+        border-bottom: 1px solid #ccc;
+        padding: 0 0 10px;
+      }
     }
   }
 
@@ -386,22 +398,6 @@
   }
   .kss-markup pre {
     margin: 0;
-  }
-
-  .kss-color {
-    line-height: 50px;
-  }
-  .kss-color__swatch {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    border-radius: 40px; // 20px or less gives flattened edges on the circle.
-    border: 2px solid #000;
-    margin-right: 10px;
-    vertical-align: middle;
-  }
-  .kss-color__variable {
-    margin-right: 10px;
   }
 
   .kss-github {

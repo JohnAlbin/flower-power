@@ -4,15 +4,24 @@
 
 // Flower
 //
-// The Flower component is a responsive flower, with the following states:
+// The Flower component is a responsive flower, with one variation
+//
+// - The “tulip” variant
+//
+// and the following states:
 //
 // - mobile (the default)
 // - desktop (screen sizes larger than 60em)
 // - hover/focus
 // - is-pollinating (state triggered by JavaScript)
+// - night-time skin (global state or “theme” in SMACSS)
 //
 // To view all of these state variations, the user will need to change the
-// viewport width and hover over the component.
+// viewport width and hover/focus over the component.
+//
+// After looking at all the variants and states of the component, head over to
+// the “Flower (deconstructed)” page to see the flower component’s parts
+// (elements).
 //
 // Style guide: flower
 
@@ -22,17 +31,7 @@
 // can also be applied to a variety of different collections of HTML; the markup
 // below is just one example.
 //
-// Markup:
-// <div class="flower__bed">
-//   <div class="flower">
-//     <div class="flower__petals">
-//       <div class="flower__face"></div>
-//     </div>
-//     <div class="flower__stem">
-//       <div class="flower__leaves"></div>
-//     </div>
-//   </div>
-// </div>
+// Markup: flower-with-bed.hbs
 //
 // Style guide: flower-deconstructed
 
@@ -48,21 +47,16 @@
 
 // Flower
 //
-// Markup:
-// <div class="flower {{modifier_class}}">
-//   <div class="flower__petals">
-//     <div class="flower__face"></div>
-//   </div>
-//   <div class="flower__stem">
-//     <div class="flower__leaves"></div>
-//   </div>
-// </div>
+// The default styling of the flower component with its default HTML elements.
 //
-// .flower--tulip - The tulip variant.
-// .flower--responsive - The responsive variant (includes mobile/desktop styles.)
-// .flower--print - The print variant (also used for @media print styles.)
-// .is-pollinating - A JavaScript interaction class.
-// .flower--tulip.is-pollinating - A JavaScript interaction class.
+// Markup: flower.hbs
+//
+// .flower--tulip - The tulip **variant**. Just add this class to the same HTML element that has `.flower`.
+// .flower--responsive - The responsive variant includes a media query **state** to add “desktop” styling to the flower for large screens.
+// .flower--print - The print variant is a duplicate of the `@media print` **state**.
+// :hover - The hover **state** (same as the focus state.)
+// .flower--tulip:hover - Tulip **variant** with hover/focus **state**.
+// .is-pollinating - A **state** triggered when JavaScript adds this class.
 //
 // Style guide: flower.base
 
@@ -70,8 +64,10 @@
 //
 // The base class name for the component is `.flower`. To see the CSS that is applied to it, use your browser's DOM inspector.
 //
-// Markup:
-// <div class="flower"></div>
+// Note: there's not much CSS here since most styling is on the other elements
+// of the flower component.
+//
+// Markup: element/flower-wrapper.hbs
 //
 // Style guide: flower-deconstructed.base
 
@@ -84,10 +80,7 @@
 //
 // The `.flower__petals` element.
 //
-// Markup:
-// <div class="{{modifier_class}}" style="position: relative; height: 561px">
-//   <div class="flower__petals"></div>
-// </div>
+// Markup: element/flower__petals.hbs
 //
 // .flower--tulip - The tulip variation causes the `.flower__petals` to display differently.
 //
@@ -108,10 +101,7 @@
 //
 // The `.flower__face` element.
 //
-// Markup:
-// <div style="position: relative; height: 561px">
-//   <div class="flower__face"></div>
-// </div>
+// Markup: element/flower__face.hbs
 //
 // Style guide: flower-deconstructed.face
 
@@ -129,10 +119,7 @@
 //
 // The `.flower__stem` element.
 //
-// Markup:
-// <div style="position: relative; height: 561px">
-//   <div class="flower__stem"></div>
-// </div>
+// Markup: element/flower__stem.hbs
 //
 // Style guide: flower-deconstructed.stem
 
@@ -147,10 +134,7 @@
 //
 // The `.flower__leaves` element.
 //
-// Markup:
-// <div style="position: relative; height: 561px">
-//   <div class="flower__leaves"></div>
-// </div>
+// Markup: element/flower__leaves.hbs
 //
 // Weight: 1
 //
@@ -165,17 +149,10 @@
 
 // Flower (with bed)
 //
-// Markup:
-// <div class="flower__bed {{modifier_class}}__bed">
-//   <div class="flower {{modifier_class}}">
-//     <div class="flower__petals">
-//       <div class="flower__face"></div>
-//     </div>
-//     <div class="flower__stem">
-//       <div class="flower__leaves"></div>
-//     </div>
-//   </div>
-// </div>
+// The styling of the flower component with an extra `.flower__bed` HTML element
+// wrapping the component.
+//
+// Markup: flower-with-bed.hbs
 //
 // .flower--tulip - The tulip variant.
 // .flower--responsive - The responsive variant (includes mobile/desktop styles.)
@@ -186,10 +163,7 @@
 //
 // The `.flower__bed` element.
 //
-// Markup:
-// <div style="position: relative; height: 561px">
-//   <div class="flower__bed"></div>
-// </div>
+// Markup: element/flower__bed.hbs
 //
 // Weight: 2
 //
@@ -289,17 +263,14 @@
 
 // Flower (at night)
 //
-// Markup:
-// <div class="is-night">
-//   <div class="flower">
-//     <div class="flower__petals">
-//       <div class="flower__face"></div>
-//     </div>
-//     <div class="flower__stem">
-//       <div class="flower__leaves"></div>
-//     </div>
-//   </div>
-// </div>
+// If you want to affect all/most components on a page, you can add a skin/theme
+// class to the `body` or `html` elements so that a component can react to its
+// parent's classes.
+//
+// In the night-time skin for the flower component, we add a `is-night` class
+// to a parent HTML element of the component.
+//
+// Markup: flower-is-night.hbs
 //
 // Style guide: flower.skin-night
 

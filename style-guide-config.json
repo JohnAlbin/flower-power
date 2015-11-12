@@ -1,8 +1,15 @@
 {
+  "//": "The source and destination paths are relative to this file.",
   "source":       "./sass",
   "destination":  "./",
+
+  "//": "The css and js paths are URLs relative to the generated style guide.",
   "css": [
-    "css/styles.css"
+    "css/styles.css",
+    "css/kss/kss-only.css"
   ],
-  "js": []
+  "js": [],
+
+  "title": "“Flower Power” Component Style Guide",
+  "homepage": "homepage.md"
 }
