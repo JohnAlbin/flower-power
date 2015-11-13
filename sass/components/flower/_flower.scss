@@ -39,9 +39,11 @@
 // Shared styling among the component parts.
 %flower-base {
   position: absolute;
-  width: 588px;
-  height: 561px;
-  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: image-url('flower.png') left top / cover no-repeat;
   content: '';
 }
 
@@ -74,7 +76,7 @@
 .flower,
 %flower {
   @extend %flower-base;
-  position: relative;
+  background-image: none;
 
 // Flower petals
 //
@@ -89,11 +91,9 @@
   &__petals {
     @extend %flower-base;
     background-image: image-url('flower__petals.png');
-    background-position: 201px top;
 
     .flower--tulip & {
       background-image: image-url('flower--tulip__petals.png');
-      background-position: 273px 53px;
     }
   }
 
@@ -108,7 +108,6 @@
   &__face {
     @extend %flower-base;
     background-image: image-url('flower__face.png');
-    background-position: 282px 80px;
 
     .flower--tulip & {
       background-image: none;
@@ -126,7 +125,6 @@
   &__stem::before {
     @extend %flower-base;
     background-image: image-url('flower__stem.png');
-    background-position: 231px 167px;
     z-index: -4;
   }
 
@@ -143,7 +141,6 @@
   &__leaves {
     @extend %flower-base;
     background-image: image-url('flower__leaves.png');
-    background-position: 169px 258px;
     z-index: -5;
   }
 
@@ -171,47 +168,42 @@
 
   &__bed {
     @extend %flower-base;
-    position: relative;
+    background-image: none;
 
-    .flower {
-      position: absolute;
-    }
-
-    &::before {
-      @extend %flower-base;
-      bottom: 58px;
-      height: 130px;
-      z-index: -10;
-      background-image: image-url('flower__bed-back.png');
-      background-position: 65px top;
-    }
+    &::before,
     &::after {
       @extend %flower-base;
-      bottom: 58px;
-      height: 130px;
+      // Allow the child .flower to receive hover/focus states.
+      top: auto;
+      bottom: 0;
+      height: 30%;
+      background-position: left bottom;
+    }
+    &::before {
+      z-index: -10;
+      background-image: image-url('flower__bed-back.png');
+    }
+    &::after {
       background-image: image-url('flower__bed.png');
-      background-position: 30px top;
     }
   }
 
   // Hover state.
   &::before {
     @extend %flower-base;
-    background-image: none;
-    background-image: image-url('flower-hover.png');
-    background-position: -105px 0;
+    background-image: image-url('flower-is-hover.png');
+    background-position: -(566px/2) 0; // -50% does not work. :-\
     @include transition(background-position 1s);
   }
   &:hover::before,
   &:focus::before {
-    background-position: 105px 0;
+    background-position: 0 0;
     @include transition(background-position 1s);
   }
 
   &.is-pollinating::before {
     @extend %flower-base;
     background-image: image-url('flower-is-pollinating.png');
-    background-position: 230px 43px;
     z-index: 1;
   }
 
@@ -220,7 +212,6 @@
     @media all and (min-width: 60em) {
       // Show the desktop and vase image.
       background-image: image-url('flower-is-desktop.png');
-      background-position: left 168px;
 
       // The stem and leaves images are included with the vase and desktop.
       .flower__stem::before {
@@ -276,7 +267,6 @@
 
   .is-night & {
     background-image: image-url('flower-is-night.png');
-    background-position: 167px 0;
 
     // The stem, leaves and petals images are included with component.
     .flower__stem::before {

@@ -1,0 +1,6 @@
+// Container with a fixed aspect ratio, but flexible size.
+%flexible-container {
+  position: relative;
+  padding: (590/566)*100% 0 0 0; // 566:590 aspect ratio
+  height: 0;
+}
