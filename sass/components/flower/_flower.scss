@@ -1,5 +1,6 @@
 // NOTE: Since this is an example style guide, we have way more documentation
-// for this component than usual.
+// for this component than usual. Normally, there'd be only one KSS doc block
+// per component.
 
 
 // Flower
@@ -24,6 +25,7 @@
 // (elements).
 //
 // Style guide: flower
+
 
 // Flower (deconstructed)
 //
@@ -53,18 +55,24 @@
 //
 // Markup: flower.hbs
 //
-// .flower--tulip - The tulip **variant**. Just add this class to the same HTML element that has `.flower`.
-// .flower--responsive - The responsive variant includes a media query **state** to add “desktop” styling to the flower for large screens.
-// .flower--print - The print variant is a duplicate of the `@media print` **state**.
-// :hover - The hover **state** (same as the focus state.)
+// .flower--tulip       - The tulip **variant**. Just add this class to the same
+//                        HTML element that has `.flower`.
+// .flower--responsive  - The responsive variant includes a media query
+//                        **state** to add “desktop” styling to the flower for
+//                        large screens.
+// .flower--print       - The print variant is a duplicate of the `@media print`
+//                        **state**.
+// :hover               - The hover **state** (same as the focus state.)
 // .flower--tulip:hover - Tulip **variant** with hover/focus **state**.
-// .is-pollinating - A **state** triggered when JavaScript adds this class.
+// .is-pollinating      - A **state** triggered when JavaScript adds this class.
 //
 // Style guide: flower.base
 
+
 // Flower (base element)
 //
-// The base class name for the component is `.flower`. To see the CSS that is applied to it, use your browser's DOM inspector.
+// The base class name for the component is `.flower`. To see the CSS that is
+// applied to it, use your browser's DOM inspector.
 //
 // Note: there's not much CSS here since most styling is on the other elements
 // of the flower component.
@@ -84,7 +92,8 @@
 //
 // Markup: element/flower__petals.hbs
 //
-// .flower--tulip - The tulip variation causes the `.flower__petals` to display differently.
+// .flower--tulip - The tulip variation causes the `.flower__petals` to display
+//                  differently.
 //
 // Style guide: flower-deconstructed.petals
 
@@ -152,9 +161,9 @@
 // Markup: flower-with-bed.hbs
 //
 // .flower--tulip - The tulip variant.
-// .flower--responsive - The responsive variant (includes mobile/desktop styles.)
 //
 // Style guide: flower.bed
+
 
 // Flower bed
 //
