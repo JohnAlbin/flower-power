@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAEA,sBAAuB;EACrB,QAAQ,EAAE,QAAQ;EAClB,MAAM,EAAE,KAAK",
-"sources": ["../sass/kss-only.scss"],
-"names": [],
-"file": "kss-only.css"
-}

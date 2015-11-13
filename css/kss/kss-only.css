@@ -1,6 +1,14 @@
-.kss-modifier__example {
+#kss-node .kss-modifier__example {
   position: relative;
-  height: 561px;
+  padding: 104.24028% 0 0 0;
+  height: 0;
+}
+
+#kss-node .kss-modifier__wrapper {
+  max-width: 566px;
+}
+#kss-node .kss-markup {
+  max-width: 586px;
 }
 
 /*# sourceMappingURL=kss-only.css.map */

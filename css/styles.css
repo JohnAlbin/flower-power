@@ -1,83 +1,74 @@
 .flower, .flower__petals, .flower__face, .flower__stem::before, .flower__leaves, .flower__bed, .flower__bed::before, .flower__bed::after, .flower::before, .flower.is-pollinating::before {
   position: absolute;
-  width: 588px;
-  height: 561px;
-  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../images/flower.png?1447376477') left top/cover no-repeat;
   content: '';
 }
 
 .flower {
-  position: relative;
+  background-image: none;
 }
 .flower__petals {
-  background-image: url('../images/flower__petals.png?1402479382');
-  background-position: 201px top;
+  background-image: url('../images/flower__petals.png?1447375921');
 }
 .flower--tulip .flower__petals {
-  background-image: url('../images/flower--tulip__petals.png?1402479382');
-  background-position: 273px 53px;
+  background-image: url('../images/flower--tulip__petals.png?1447375973');
 }
 .flower__face {
-  background-image: url('../images/flower__face.png?1402479382');
-  background-position: 282px 80px;
+  background-image: url('../images/flower__face.png?1447375846');
 }
 .flower--tulip .flower__face {
   background-image: none;
 }
 .flower__stem::before {
-  background-image: url('../images/flower__stem.png?1402479382');
-  background-position: 231px 167px;
+  background-image: url('../images/flower__stem.png?1447375940');
   z-index: -4;
 }
 .flower__leaves {
-  background-image: url('../images/flower__leaves.png?1402479382');
-  background-position: 169px 258px;
+  background-image: url('../images/flower__leaves.png?1447375871');
   z-index: -5;
 }
 .flower__bed {
-  position: relative;
+  background-image: none;
 }
-.flower__bed .flower {
-  position: absolute;
+.flower__bed::before, .flower__bed::after {
+  top: auto;
+  bottom: 0;
+  height: 30%;
+  background-position: left bottom;
 }
 .flower__bed::before {
-  bottom: 58px;
-  height: 130px;
   z-index: -10;
-  background-image: url('../images/flower__bed-back.png?1402479382');
-  background-position: 65px top;
+  background-image: url('../images/flower__bed-back.png?1447375755');
 }
 .flower__bed::after {
-  bottom: 58px;
-  height: 130px;
-  background-image: url('../images/flower__bed.png?1402479382');
-  background-position: 30px top;
+  background-image: url('../images/flower__bed.png?1447375787');
 }
 .flower::before {
-  background-image: none;
-  background-image: url('../images/flower-hover.png?1402479382');
-  background-position: -105px 0;
+  background-image: url('../images/flower-is-hover.png?1447376022');
+  background-position: -283px 0;
   -moz-transition: background-position 1s;
   -o-transition: background-position 1s;
   -webkit-transition: background-position 1s;
   transition: background-position 1s;
 }
 .flower:hover::before, .flower:focus::before {
-  background-position: 105px 0;
+  background-position: 0 0;
   -moz-transition: background-position 1s;
   -o-transition: background-position 1s;
   -webkit-transition: background-position 1s;
   transition: background-position 1s;
 }
 .flower.is-pollinating::before {
-  background-image: url('../images/flower-is-pollinating.png?1402479382');
-  background-position: 230px 43px;
+  background-image: url('../images/flower-is-pollinating.png?1447375649');
   z-index: 1;
 }
 @media all and (min-width: 60em) {
   .flower--responsive {
-    background-image: url('../images/flower-is-desktop.png?1402479382');
-    background-position: left 168px;
+    background-image: url('../images/flower-is-desktop.png?1447376064');
   }
   .flower--responsive .flower__stem::before {
     background-image: none;
@@ -91,7 +82,7 @@
 }
 @media print {
   .flower {
-    background-image: url('../images/flower-is-print.png?1402479382');
+    background-image: url('../images/flower-is-print.png?1447376519');
   }
   .flower .flower__stem::before {
     background-image: none;
@@ -101,7 +92,7 @@
   }
 }
 .flower--print {
-  background-image: url('../images/flower-is-print.png?1402479382');
+  background-image: url('../images/flower-is-print.png?1447376519');
 }
 .flower--print .flower__stem::before {
   background-image: none;
@@ -110,8 +101,7 @@
   background-image: none;
 }
 .is-night .flower {
-  background-image: url('../images/flower-is-night.png?1411894253');
-  background-position: 167px 0;
+  background-image: url('../images/flower-is-night.png?1447376446');
 }
 .is-night .flower .flower__stem::before {
   background-image: none;

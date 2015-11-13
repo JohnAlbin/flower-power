@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAEA,sBAAuB;EACrB,QAAQ,EAAE,QAAQ;EAClB,MAAM,EAAE,KAAK",
-"sources": ["../../sass/kss/kss-only.scss"],
+"mappings": "AACA,gCAAoB;EAClB,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,gBAAoB;EAC7B,MAAM,EAAE,CAAC;;;ACCT,gCAAuB;EACrB,SAAS,EAAE,KAAK;;AAGlB,qBAAY;EACV,SAAS,EAAE,KAAY",
+"sources": ["../../sass/components/flexible-container/_flexible-container.scss","../../sass/kss/kss-only.scss"],
 "names": [],
 "file": "kss-only.css"
 }
